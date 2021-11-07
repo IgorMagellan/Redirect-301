@@ -5,6 +5,10 @@
 
 ![2021-11-07_20-48-03](https://user-images.githubusercontent.com/35865856/140658866-b65a882b-c5e6-47ba-b3af-8a7ec6835187.png)
 
-Необходимы библиотеки времени выполнения (RTL)
-<https://github.com/VFPX/VFPRuntimeInstallers>
+Программа написана на Visual FoxPro 9 (SP2).
 
+Необходимы библиотеки времени выполнения (RTL).
+
+На этом ресурсе они есть - <https://github.com/VFPX/VFPRuntimeInstallers>
+
+выбрать VFP9SP2RT.exe 
