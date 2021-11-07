@@ -61,33 +61,3 @@ ELSE
 ENDIF && FCREATE
 
 RETURN
-
-
-
-*!*	    *  запись заголовка
-*!*	  =FPUTS(lnFhOut,"php_value register_globals 0")
-*!*	  =FPUTS(lnFhOut,"")
-*!*	  =FPUTS(lnFhOut,"Options +FollowSymLinks")
-*!*	  =FPUTS(lnFhOut,"")
-*!*	  =FPUTS(lnFhOut,"RewriteEngine On")
-*!*	  =FPUTS(lnFhOut,"")
-
-*!*	   * запись правил
-
-*!*	   SELECT rules 
-*!*	   SET ORDER TO idgrp
-*!*	   SCAN FOR rules.idgrp>0 .AND. rules.lInOut
-*!*	        SELECT pins
-*!*	        COUNT FOR pins.idgrp=rules.idgrp TO nCntInGrp &&считаем количество
-*!*	        SELECT rules
-*!*	       =FPUTS(lnFhOut,"# ID:"+TRANSFORM(rules.idgrp,"@L 99999")+" N-"+ALLTRIM(STR(nCntInGrp))+" "+ALLTRIM(rules.commentar))
-*!*	       =FPUTS(lnFhOut,"RewriteCond %{QUERY_STRING} ^"+ALLTRIM(rules.rCond))  
-*!*	       =FPUTS(lnFhOut,"RewriteRule ^index.php$ "+ALLTRIM(rules.rRule)+" [R=301,L]")
-*!*	       =FPUTS(lnFhOut,"")           
-*!*	   ENDSCAN
-
-*!*	* Запись хвоста
-*!*	  =FPUTS(lnFhOut,"")
-*!*	  =FPUTS(lnFhOut,"#  =============== БЫЛО ТОЛЬКО ЭТО ====================") 
-*!*	  =FPUTS(lnFhOut,"RewriteCond %{HTTP_HOST} ^shop.pkf-karo.ru")
-*!*	  =FPUTS(lnFhOut,"RewriteRule (.*) http://www.shop.pkf-karo.ru/$1 [R=301,L]")
