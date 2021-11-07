@@ -1,0 +1,683 @@
+php_value register_globals 0
+
+Options +FollowSymLinks
+
+RewriteEngine on
+
+
+# ID:00001 N-21 Новости
+RewriteCond %{QUERY_STRING} id=5&Itemid=14
+RewriteRule ^index.php$ https://pkf-karo.ru/text/news? [R=301,L]
+
+# ID:00005 N-2 Контакты
+RewriteCond %{QUERY_STRING} id=4&Itemid=(6|99999999)
+RewriteRule ^index.php$ https://pkf-karo.ru/kontakty/? [R=301,L]
+
+# ID:00006 N-2 Условия поставки
+RewriteCond %{QUERY_STRING} id=12&Itemid=(19|25)
+RewriteRule ^index.php$ https://pkf-karo.ru/usloviya-postavki/? [R=301,L]
+
+# ID:00008 N-2 Поиск
+RewriteCond %{QUERY_STRING} ^option=com_virtuemart&page=shop.search
+RewriteRule ^index.php$ https://pkf-karo.ru/? [R=301,L]
+
+# ID:00017 N-2 Разное - Сувениры с гравюрой на металле
+RewriteCond %{QUERY_STRING} category_id=111
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-s-gravyuroy-na-metalle/raznoe/? [R=301,L]
+
+# ID:00002 N-1 Мир камня ->
+RewriteCond %{QUERY_STRING} id=7&Itemid=35
+RewriteRule ^index.php$ https://pkf-karo.ru/text/mir-kamnya/ [R=301,L]
+
+# ID:00003 N-1 О компании
+RewriteCond %{QUERY_STRING} ^option=com_content&task=view&id=3&Itemid=5
+RewriteRule ^index.php$ https://pkf-karo.ru/text/okompanii/? [R=301,L]
+
+# ID:00004 N-1 Каталог
+RewriteCond %{QUERY_STRING} ^page=shop.browse&option=com_virtuemart&Itemid=8
+RewriteRule ^index.php$ https://pkf-karo.ru/? [R=301,L]
+
+# ID:00007 N-1 Ссылки
+RewriteCond %{QUERY_STRING} id=5&Itemid=7
+RewriteRule ^index.php$ https://pkf-karo.ru/ssylki/? [R=301,L]
+
+# ID:00018 N-1 Шкатулки из камня - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=126
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-zmeevika/shkatulki/? [R=301,L]
+
+# ID:00023 N-1 Шкатулки - Сувениры из камня - Малахит
+RewriteCond %{QUERY_STRING} category_id=66
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-malakhita/shkatulki/? [R=301,L]
+
+# ID:00032 N-1 Шкатулки, ларцы - Сувениры из камня и бронзы
+RewriteCond %{QUERY_STRING} category_id=46
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-s-bronzoy/shkatulki-lartsy/? [R=301,L]
+
+# ID:00047 N-1 Визитницы - Сувениры из камня - бронза
+RewriteCond %{QUERY_STRING} category_id=86
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-s-bronzoy/pismennye-pribory/? [R=301,L]
+
+# ID:00060 N-1 Бронза Подсвечники - Сувениры из камня
+RewriteCond %{QUERY_STRING} category_id=43
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-s-bronzoy/podsvechniki/? [R=301,L]
+
+# ID:00061 N-1 Змеевик Подсвечники - Сувениры из камня
+RewriteCond %{QUERY_STRING} category_id=17&
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-zmeevika/podsvechniki/? [R=301,L]
+
+# ID:00071 N-1 Сувениры из чароита - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=121
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-yashmy/? [R=301,L]
+
+# ID:00076 N-1 Рисунки на изделиях - Средние
+RewriteCond %{QUERY_STRING} category_id=10&
+RewriteRule ^index.php$ https://pkf-karo.ru/risunki-na-izdeliyakh/srednie/? [R=301,L]
+
+# ID:00079 N-1 Лампы настольные
+RewriteCond %{QUERY_STRING} category_id=184
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-malakhita/lampa-nastolnaya-iz-malakhita/? [R=301,L]
+
+# ID:00087 N-1 Рисунки на изделиях - Авторские работы - Животные
+RewriteCond %{QUERY_STRING} category_id=80
+RewriteRule ^index.php$ https://pkf-karo.ru/risunki-na-izdeliyakh/avtorskie-raboty/zhivotnye/? [R=301,L]
+
+# ID:00090 N-1 Планшетки и срезы - яшма
+RewriteCond %{QUERY_STRING} category_id=49
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-yashmy/planshetki-i-srezy/? [R=301,L]
+
+# ID:00107 N-1 Часы настенные из камня
+RewriteCond %{QUERY_STRING} category_id=76
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-zmeevika/chasy/chasy-nastennye/? [R=301,L]
+
+# ID:00119 N-1 Шары из аметиста - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=167
+RewriteRule ^index.php$ https://pkf-karo.ru/shary/shary-iz-ametista/? [R=301,L]
+
+# ID:00132 N-1 Ножи - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=178
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-s-gravyuroy-na-metalle/nozhi/? [R=301,L]
+
+# ID:00133 N-1 Бижутерия Браслеты
+RewriteCond %{QUERY_STRING} category_id=57
+RewriteRule ^index.php$ https://pkf-karo.ru/bizhuteriya/braslety/? [R=301,L]
+
+# ID:00134 N-1 Бижутерия Серьги кольца
+RewriteCond %{QUERY_STRING} category_id=61
+RewriteRule ^index.php$ https://pkf-karo.ru/bizhuteriya/koltsa-sergi/? [R=301,L]
+
+# ID:00135 N-1 Посуда сувенирная - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=181
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-s-gravyuroy-na-metalle/posuda-suvenirnaya/? [R=301,L]
+
+# ID:00140 N-1 Полуфабрикат для производства изделий - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=146
+RewriteRule ^index.php$ https://pkf-karo.ru/polufabrikat-dlya-proizvodstva-izdeliy/? [R=301,L]
+
+# ID:00142 N-1 Бусы из аметиста
+RewriteCond %{QUERY_STRING} category_id=116
+RewriteRule ^index.php$ https://pkf-karo.ru/bizhuteriya/busy-kole/busy-iz-ametista/? [R=301,L]
+
+# ID:00146 N-1 Бусы из янтаря
+RewriteCond %{QUERY_STRING} category_id=158
+RewriteRule ^index.php$ https://pkf-karo.ru/bizhuteriya/busy-kole/busy-iz-yantarya/? [R=301,L]
+
+# ID:00149 N-1 Нарды малахит
+RewriteCond %{QUERY_STRING} category_id=96
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-malakhita/raznoe/? [R=301,L]
+
+# ID:00151 N-1 Заголовок Яшма
+RewriteCond %{QUERY_STRING} category_id=14&
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-yashmy/? [R=301,L]
+
+# ID:00153 N-1 Рисунки на изделиях Разное
+RewriteCond %{QUERY_STRING} category_id=73
+RewriteRule ^index.php$ https://pkf-karo.ru/risunki-na-izdeliyakh/raznoe/? [R=301,L]
+
+# ID:00154 N-1 Изделия из селенита Шкатулки
+RewriteCond %{QUERY_STRING} category_id=149
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-selenita/? [R=301,L]
+
+# ID:00155 N-1 Бусы из граната
+RewriteCond %{QUERY_STRING} category_id=137
+RewriteRule ^index.php$ https://pkf-karo.ru/bizhuteriya/busy-kole/usy-iz-granata/? [R=301,L]
+
+# ID:00161 N-1 Бусы из кахалонга
+RewriteCond %{QUERY_STRING} category_id=129
+RewriteRule ^index.php$ https://pkf-karo.ru/bizhuteriya/busy-kole/busy-iz-kakhalonga/? [R=301,L]
+
+# ID:00168 N-1 Мир камня - Описание змеевика
+RewriteCond %{QUERY_STRING} id=50&Itemid=35
+RewriteRule ^index.php$ https://pkf-karo.ru/text/mir-kamnya/zmeevik/? [R=301,L]
+
+# ID:00170 N-1 Мир камня - Описание малахита
+RewriteCond %{QUERY_STRING} &id=52
+RewriteRule ^index.php$ https://pkf-karo.ru/text/mir-kamnya/malakhits/? [R=301,L]
+
+# ID:00171 N-0 В данной категории нет товаров
+RewriteCond %{QUERY_STRING} category_id=156
+RewriteRule ^index.php$ https://pkf-karo.ru/? [R=301,L]
+
+# ID:00019 N-12 Сувениры из камня - ПКФ КАРО (барахло)
+RewriteCond %{QUERY_STRING} sectionid=3
+RewriteRule ^index.php$ https://pkf-karo.ru/? [R=301,L]
+
+# ID:00156 N-11 Бусы из коралла, родонита, офиокальцита, флюорита, амазонита, оникса
+RewriteCond %{QUERY_STRING} category_id=(106|127|132|140|145|195)
+RewriteRule ^index.php$ https://pkf-karo.ru/bizhuteriya/busy-kole/? [R=301,L]
+
+# ID:00011 N-10 Селенит Фигурки, разное - Сувениры из камня
+RewriteCond %{QUERY_STRING} category_id=31
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-selenita/figurki-raznoe/ [R=301,L]
+
+# ID:00009 N-6 Минералы - коллекционные образцы
+RewriteCond %{QUERY_STRING} category_id=(89|68)
+RewriteRule ^index.php$ https://pkf-karo.ru/mineraly-kollektsionnye-obraztsy-suveniry/mineraly-kollektsionnye-obraztsy/? [R=301,L]
+
+# ID:00041 N-6 Изделия из змеевика, мрамора, доломита и др. камней средней твердости - Разное
+RewriteCond %{QUERY_STRING} category_id=21&
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-zmeevika/raznoe/? [R=301,L]
+
+# ID:00093 N-5 Картины
+RewriteCond %{QUERY_STRING} category_id=(148|105)
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-zmeevika/panno/? [R=301,L]
+
+# ID:00013 N-4 Селенит Подсвечники - Сувениры из камня
+RewriteCond %{QUERY_STRING} category_id=30
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-selenita/? [R=301,L]
+
+# ID:00024 N-4 Письменные приборы - Сувениры из камня
+RewriteCond %{QUERY_STRING} category_id=13&
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-zmeevika/pismennye-pribory/? [R=301,L]
+
+# ID:00042 N-4 Изделия из яшмы, родонита, долерита, чароита и др. твердых камней Разное
+RewriteCond %{QUERY_STRING} category_id=27
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-yashmy/raznoe/? [R=301,L]
+
+# ID:00062 N-4 Рисунки на изделиях Авторские работы -Море
+RewriteCond %{QUERY_STRING} category_id=82
+RewriteRule ^index.php$ https://pkf-karo.ru/risunki-na-izdeliyakh/avtorskie-raboty/more/? [R=301,L]
+
+# ID:00064 N-4 Изделия с бронзой Фигуры, кабинетные скульптуры
+RewriteCond %{QUERY_STRING} category_id=44
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-s-bronzoy/figury-kabinetnye-skulptury/? [R=301,L]
+
+# ID:00065 N-4 Бижутерия - Бусы, колье
+RewriteCond %{QUERY_STRING} category_id=60
+RewriteRule ^index.php$ https://pkf-karo.ru/bizhuteriya/busy-kole/? [R=301,L]
+
+# ID:00102 N-4 Изделия с гравировкой - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=(104|109)
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-s-gravyuroy-na-metalle/? [R=301,L]
+
+# ID:00010 N-3 раздел "Изделия с гравировкой"
+RewriteCond %{QUERY_STRING} id=16&Itemid=(14|25|99999999)
+RewriteRule ^index.php$ https://pkf-karo.ru/termopechat/? [R=301,L]
+
+# ID:00020 N-3 Круглые - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=74
+RewriteRule ^index.php$ https://pkf-karo.ru/risunki-na-izdeliyakh/? [R=301,L]
+
+# ID:00028 N-3 Упаковка - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=8&
+RewriteRule ^index.php$ https://pkf-karo.ru/dopolnitelno/upakovka/? [R=301,L]
+
+# ID:00030 N-3 Шкатулки с рисунком акриловыми красками - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=150
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-zmeevika/shkatulki-s-risunkom-akrilovymi-kraskami/? [R=301,L]
+
+# ID:00034 N-3 Шкатулки из креноида
+RewriteCond %{QUERY_STRING} id=106&Itemid=(14|25|99999999)
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-zmeevika/shkatulki/? [R=301,L]
+
+# ID:00035 N-3 Письменные приборы из малахита - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=(91|92)
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-malakhita/pismennye-pribory-iz-malakhita/? [R=301,L]
+
+# ID:00043 N-3 Визитницы - Сувениры из камня - змеевик
+RewriteCond %{QUERY_STRING} category_id=16&
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-zmeevika/pismennye-pribory/? [R=301,L]
+
+# ID:00046 N-3 Рисунки на изделиях - Малые
+RewriteCond %{QUERY_STRING} category_id=11&
+RewriteRule ^index.php$ https://pkf-karo.ru/risunki-na-izdeliyakh/malye/? [R=301,L]
+
+# ID:00048 N-3 Часы каминные - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=55
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-zmeevika/chasy/? [R=301,L]
+
+# ID:00049 N-3 Часы настольные - змеевик
+RewriteCond %{QUERY_STRING} category_id=54
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-zmeevika/chasy/chasy-nastolnye/? [R=301,L]
+
+# ID:00053 N-3 Часы змеевик  Рубль
+RewriteCond %{QUERY_STRING} &id=136
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-zmeevika/chasy/chasy-nastolnye/11083-chasy-rubl/? [R=301,L]
+
+# ID:00056 N-3 Изделия с бронзой Письменные приборы
+RewriteCond %{QUERY_STRING} category_id=42
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-s-bronzoy/pismennye-pribory/? [R=301,L]
+
+# ID:00067 N-3 Бижутерия - амулеты
+RewriteCond %{QUERY_STRING} category_id=(64|189)
+RewriteRule ^index.php$ https://pkf-karo.ru/bizhuteriya/amulety/? [R=301,L]
+
+# ID:00068 N-3 Рисунки на изделиях - Авторские работы - Портреты
+RewriteCond %{QUERY_STRING} category_id=85
+RewriteRule ^index.php$ https://pkf-karo.ru/risunki-na-izdeliyakh/avtorskie-raboty/portrety/? [R=301,L]
+
+# ID:00069 N-3 Магниты Змеевик
+RewriteCond %{QUERY_STRING} category_id=112
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-zmeevika/magnity/? [R=301,L]
+
+# ID:00078 N-3 Срезы каменные
+RewriteCond %{QUERY_STRING} category_id=50
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-zmeevika/srezy-kamennye/? [R=301,L]
+
+# ID:00085 N-3 Подставки для изготовления кубков,  памятных призов и декоративные пластины
+RewriteCond %{QUERY_STRING} category_id=101
+RewriteRule ^index.php$ https://pkf-karo.ru/polufabrikat-dlya-proizvodstva-izdeliy/? [R=301,L]
+
+# ID:00109 N-3 Бижутерия Брелки
+RewriteCond %{QUERY_STRING} category_id=(63|191)
+RewriteRule ^index.php$ https://pkf-karo.ru/bizhuteriya/brelki/? [R=301,L]
+
+# ID:00159 N-3 Заголовок каталога Рисунки на изделиях
+RewriteCond %{QUERY_STRING} category_id=36
+RewriteRule ^index.php$ https://pkf-karo.ru/risunki-na-izdeliyakh/? [R=301,L]
+
+# ID:00021 N-2 Украшения из камня - Сувениры из камня - Бижутерия
+RewriteCond %{QUERY_STRING} id=74
+RewriteRule ^index.php$ https://pkf-karo.ru/bizhuteriya/? [R=301,L]
+
+# ID:00031 N-2 Шкатулки ЯШМА Сувениры из камня
+RewriteCond %{QUERY_STRING} category_id=28
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-yashmy/shkatulki/? [R=301,L]
+
+# ID:00033 N-2 Изделия из малахита - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=34
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-malakhita/? [R=301,L]
+
+# ID:00036 N-2 Обереги - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=102
+RewriteRule ^index.php$ https://pkf-karo.ru/dopolnitelno/oberegi/? [R=301,L]
+
+# ID:00037 N-2 Палеонтологический раздел - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=153
+RewriteRule ^index.php$ https://pkf-karo.ru/dopolnitelno/paleontologicheskiy-razdel/? [R=301,L]
+
+# ID:00050 N-2 Часы настольные - Камень с бронзой
+RewriteCond %{QUERY_STRING} category_id=110
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-s-bronzoy/chasy-nastolnye/? [R=301,L]
+
+# ID:00054 N-2 Вазы из змеевика, мрамора и кожи - Сувениры из камня
+RewriteCond %{QUERY_STRING} category_id=2&
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-zmeevika/vazy-iz-zmeevika-mramora-i-kozhi/? [R=301,L]
+
+# ID:00055 N-2 Вазы - бронза
+RewriteCond %{QUERY_STRING} category_id=40
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-s-bronzoy/vazy/? [R=301,L]
+
+# ID:00057 N-2 с гравюрой на металле Письм приборы
+RewriteCond %{QUERY_STRING} category_id=113
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-s-gravyuroy-na-metalle/pismennye-pribory/? [R=301,L]
+
+# ID:00058 N-2 Курительные наборы, пепельницы, зажигалки
+RewriteCond %{QUERY_STRING} category_id=4&
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-zmeevika/kuritelnye-nabory-pepelnitsy-zazhigalki/? [R=301,L]
+
+# ID:00063 N-2 Изделия с бронзой Пепельницы
+RewriteCond %{QUERY_STRING} category_id=41
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-s-bronzoy/pepelnitsy/? [R=301,L]
+
+# ID:00066 N-2 Бижутерия - заголовок
+RewriteCond %{QUERY_STRING} category_id=33
+RewriteRule ^index.php$ https://pkf-karo.ru/bizhuteriya/? [R=301,L]
+
+# ID:00070 N-2 Магниты Селенит
+RewriteCond %{QUERY_STRING} category_id=144
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-selenita/agnity/? [R=301,L]
+
+# ID:00073 N-2 Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=117
+RewriteRule ^index.php$ https://pkf-karo.ru/? [R=301,L]
+
+# ID:00080 N-2 Рисунки на изделиях - Авторские работы - Люди
+RewriteCond %{QUERY_STRING} category_id=81
+RewriteRule ^index.php$ https://pkf-karo.ru/risunki-na-izdeliyakh/avtorskie-raboty/lyudi/? [R=301,L]
+
+# ID:00081 N-2 Шахматы, нарды - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=(87|194)
+RewriteRule ^index.php$ https://pkf-karo.ru/nastolnye-igry-shakhmaty-shashki-nardy-domino/? [R=301,L]
+
+# ID:00082 N-2 Тарелки декоративные - фарфоровые
+RewriteCond %{QUERY_STRING} category_id=51
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-zmeevika/tarelki-dekorativnye/? [R=301,L]
+
+# ID:00083 N-2 Тарелки из дерева - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=20
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-na-dereve/tarelki-iz-dereva/? [R=301,L]
+
+# ID:00086 N-2 Подковы - Сувениры из камня
+RewriteCond %{QUERY_STRING} category_id=180
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-s-gravyuroy-na-metalle/podkovy/? [R=301,L]
+
+# ID:00088 N-2 Рисунки на изделиях - Авторские работы - Ню
+RewriteCond %{QUERY_STRING} category_id=84
+RewriteRule ^index.php$ https://pkf-karo.ru/risunki-na-izdeliyakh/avtorskie-raboty/nyu/? [R=301,L]
+
+# ID:00089 N-2 Пепельницы - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=15&
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-yashmy/pepelnitsy/? [R=301,L]
+
+# ID:00095 N-2 Рисунки на изделиях - Авторские работы
+RewriteCond %{QUERY_STRING} category_id=79
+RewriteRule ^index.php$ https://pkf-karo.ru/risunki-na-izdeliyakh/avtorskie-raboty/? [R=301,L]
+
+# ID:00098 N-2 Разное Малахит
+RewriteCond %{QUERY_STRING} category_id=67
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-malakhita/raznoe/? [R=301,L]
+
+# ID:00103 N-2 Изделия из селенита - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=29
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-selenita/? [R=301,L]
+
+# ID:00104 N-2 Часы из малахита - Сувениры из камня
+RewriteCond %{QUERY_STRING} category_id=94
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-malakhita/chasy/? [R=301,L]
+
+# ID:00105 N-2 Часы из селенита - Сувениры из камня
+RewriteCond %{QUERY_STRING} category_id=32
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-selenita/chasy/ [R=301,L]
+
+# ID:00108 N-2 Бижутерия Кулоны
+RewriteCond %{QUERY_STRING} category_id=157
+RewriteRule ^index.php$ https://pkf-karo.ru/bizhuteriya/kulony/? [R=301,L]
+
+# ID:00110 N-2 Бижутерия Броши, гарнитуры
+RewriteCond %{QUERY_STRING} category_id=59
+RewriteRule ^index.php$ https://pkf-karo.ru/bizhuteriya/broshi-garniturymelkhior/? [R=301,L]
+
+# ID:00111 N-2 Бижутерия Бусы  ассорти
+RewriteCond %{QUERY_STRING} category_id=130
+RewriteRule ^index.php$ https://pkf-karo.ru/bizhuteriya/busy-kole/? [R=301,L]
+
+# ID:00113 N-2 Шары из агата - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=163
+RewriteRule ^index.php$ https://pkf-karo.ru/shary/shary-iz-agata/? [R=301,L]
+
+# ID:00114 N-2 Шары из офиокальцита - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=197
+RewriteRule ^index.php$ https://pkf-karo.ru/shary/shary-iz-ofiokaltsita/? [R=301,L]
+
+# ID:00115 N-2 Шары из родонита - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=169
+RewriteRule ^index.php$ https://pkf-karo.ru/shary/shary-iz-rodonita/? [R=301,L]
+
+# ID:00116 N-2 Шары из розового кварца - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=160
+RewriteRule ^index.php$ https://pkf-karo.ru/shary/shary-iz-rozovogo-kvartsa/? [R=301,L]
+
+# ID:00117 N-2 Шары из розового цитрина - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=166
+RewriteRule ^index.php$ https://pkf-karo.ru/shary/shary-iz-tsitrina/? [R=301,L]
+
+# ID:00118 N-2 Шары из яшмы - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=168
+RewriteRule ^index.php$ https://pkf-karo.ru/shary/shary-iz-yashmy/? [R=301,L]
+
+# ID:00120 N-2 Шары из амфиболита - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=198
+RewriteRule ^index.php$ https://pkf-karo.ru/shary/shary-iz-amfibolita/? [R=301,L]
+
+# ID:00121 N-2 Шары из волосатика - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=162
+RewriteRule ^index.php$ https://pkf-karo.ru/shary/shary-iz-volosatika/? [R=301,L]
+
+# ID:00122 N-2 Шары из горного хрусталя - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=161
+RewriteRule ^index.php$ https://pkf-karo.ru/shary/shary-iz-gornogo-khrustalya/? [R=301,L]
+
+# ID:00123 N-2 Шары из змеевика - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=173
+RewriteRule ^index.php$ https://pkf-karo.ru/shary/shary-iz-zmeevika/? [R=301,L]
+
+# ID:00124 N-2 Шары из лазурита - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=170
+RewriteRule ^index.php$ https://pkf-karo.ru/shary/shary-iz-lazurita/? [R=301,L]
+
+# ID:00125 N-2 Шары из тигрового глаза - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=159
+RewriteRule ^index.php$ https://pkf-karo.ru/shary/shary-iz-tigrovogo-glaza/? [R=301,L]
+
+# ID:00126 N-2 Шары из обсидиана - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=165
+RewriteRule ^index.php$ https://pkf-karo.ru/shary/shary-iz-obsidiana/? [R=301,L]
+
+# ID:00130 N-2 Часы - яшма
+RewriteCond %{QUERY_STRING} category_id=(77|78)
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-yashmy/chasy/? [R=301,L]
+
+# ID:00131 N-2 Кабошоны - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=154
+RewriteRule ^index.php$ https://pkf-karo.ru/mineraly-kollektsionnye-obraztsy-suveniry/kaboshony/? [R=301,L]
+
+# ID:00136 N-2 Изделия с шелкографией - заголовок
+RewriteCond %{QUERY_STRING} category_id=155
+RewriteRule ^index.php$ https://pkf-karo.ru/termopechat/? [R=301,L]
+
+# ID:00137 N-2 Изделия с шелкографией - Разное
+RewriteCond %{QUERY_STRING} category_id=192
+RewriteRule ^index.php$ https://pkf-karo.ru/termopechat/raznoe/? [R=301,L]
+
+# ID:00138 N-2 Сувениры из янтаря, меха, гипса - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=107
+RewriteRule ^index.php$ https://pkf-karo.ru/dopolnitelno/oberegi/? [R=301,L]
+
+# ID:00141 N-2 Бусы из авантюрина - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=114
+RewriteRule ^index.php$ https://pkf-karo.ru/bizhuteriya/busy-kole/? [R=301,L]
+
+# ID:00143 N-2 Бусы из агата
+RewriteCond %{QUERY_STRING} category_id=115
+RewriteRule ^index.php$ https://pkf-karo.ru/bizhuteriya/busy-kole/busy-iz-agata/? [R=301,L]
+
+# ID:00144 N-2 Бусы из горного хрусталя - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=136
+RewriteRule ^index.php$ https://pkf-karo.ru/bizhuteriya/busy-kole/busy-iz-gornogo-khrustalya/ [R=301,L]
+
+# ID:00145 N-2 Бусы из цитрина
+RewriteCond %{QUERY_STRING} category_id=139
+RewriteRule ^index.php$ https://pkf-karo.ru/bizhuteriya/busy-kole/busy-iz-tsitrina/? [R=301,L]
+
+# ID:00148 N-2 Дополнительно - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=37
+RewriteRule ^index.php$ https://pkf-karo.ru/dopolnitelno/? [R=301,L]
+
+# ID:00150 N-2 змеевика Часы Заголовок
+RewriteCond %{QUERY_STRING} category_id=52
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-zmeevika/chasy/? [R=301,L]
+
+# ID:00152 N-2 Заголовок Изделия с бронзой
+RewriteCond %{QUERY_STRING} category_id=35
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-s-bronzoy/? [R=301,L]
+
+# ID:00158 N-2 Заголовок каталога Змеевик
+RewriteCond %{QUERY_STRING} category_id=1&
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-zmeevika/? [R=301,L]
+
+# ID:00169 N-2 Мир камня - Описание яшма
+RewriteCond %{QUERY_STRING} &id=51&
+RewriteRule ^index.php$ https://pkf-karo.ru/text/mir-kamnya/yashma/? [R=301,L]
+
+# ID:00040 N-1 Панно - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=3&
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-zmeevika/panno/? [R=301,L]
+
+# ID:00059 N-1 ЯШМА Письменные приборы
+RewriteCond %{QUERY_STRING} category_id=26
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-yashmy/pismennye-pribory/? [R=301,L]
+
+# ID:00072 N-1 Сувениры из малахита - Сувениры из камня
+RewriteCond %{QUERY_STRING} category_id=118
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-malakhita/? [R=301,L]
+
+# ID:00084 N-1 Пирамиды - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=108
+RewriteRule ^index.php$ https://pkf-karo.ru/piramidy/? [R=301,L]
+
+# ID:00091 N-1 Книги - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=99
+RewriteRule ^index.php$ https://pkf-karo.ru/dopolnitelno/knigi/? [R=301,L]
+
+# ID:00092 N-1 Карты регионов - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=176
+RewriteRule ^index.php$ https://pkf-karo.ru/termopechat/karty-regionov/? [R=301,L]
+
+# ID:00094 N-1 Иконы - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=187
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-zmeevika/panno/? [R=301,L]
+
+# ID:00096 N-1 Рисунки на изделиях Большие
+RewriteCond %{QUERY_STRING} category_id=70
+RewriteRule ^index.php$ https://pkf-karo.ru/risunki-na-izdeliyakh/bolshie/? [R=301,L]
+
+# ID:00097 N-1 Большие форматы панно - Сувениры из камня
+RewriteCond %{QUERY_STRING} category_id=9&
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-zmeevika/panno/bolshie-formaty/? [R=301,L]
+
+# ID:00101 N-1 Рисунки на изделиях - Авторские работы - Натюрморт
+RewriteCond %{QUERY_STRING} category_id=83
+RewriteRule ^index.php$ https://pkf-karo.ru/risunki-na-izdeliyakh/avtorskie-raboty/natyurmort/? [R=301,L]
+
+# ID:00106 N-1 Цветы из селенита - Сувениры из камня
+RewriteCond %{QUERY_STRING} category_id=143
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-selenita/? [R=301,L]
+
+# ID:00127 N-1 Шары из соколиного глаза - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=164
+RewriteRule ^index.php$ https://pkf-karo.ru/shary/shary-iz-sokolinnogo-glaza/? [R=301,L]
+
+# ID:00128 N-1 Шары из криноида - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=174
+RewriteRule ^index.php$ https://pkf-karo.ru/shary/shary-iz-krinoida/? [R=301,L]
+
+# ID:00129 N-1 Шары из мрамора - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=172
+RewriteRule ^index.php$ https://pkf-karo.ru/shary/shary-iz-mramora/? [R=301,L]
+
+# ID:00139 N-1 Образцы камня - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=38
+RewriteRule ^index.php$ https://pkf-karo.ru/dopolnitelno/braztsy-kamnya/? [R=301,L]
+
+# ID:00147 N-1 Бусы из яшмы
+RewriteCond %{QUERY_STRING} category_id=135
+RewriteRule ^index.php$ https://pkf-karo.ru/bizhuteriya/busy-kole/busy-iz-yashmy/? [R=301,L]
+
+# ID:00157 N-1 Заголовок Изделия на дереве
+RewriteCond %{QUERY_STRING} category_id=5&
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-na-dereve/? [R=301,L]
+
+# ID:00160 N-1 Заголовок каталога Виды сувениров из камня
+RewriteCond %{QUERY_STRING} category_id=125
+RewriteRule ^index.php$ https://pkf-karo.ru/? [R=301,L]
+
+# ID:00162 N-1 Бусы из дымчатого кварца
+RewriteCond %{QUERY_STRING} category_id=128
+RewriteRule ^index.php$ https://pkf-karo.ru/bizhuteriya/busy-kole/busy-iz-dymchatogo-kvartsa/? [R=301,L]
+
+# ID:00163 N-1 Бусы из нефрита
+RewriteCond %{QUERY_STRING} category_id=193
+RewriteRule ^index.php$ https://pkf-karo.ru/bizhuteriya/busy-kole/busy-iz-nefrita/? [R=301,L]
+
+# ID:00164 N-1 Бусы из розового кварца
+RewriteCond %{QUERY_STRING} category_id=131
+RewriteRule ^index.php$ https://pkf-karo.ru/bizhuteriya/busy-kole/busy-iz-rozovogo-kvartsa/? [R=301,L]
+
+# ID:00165 N-1 Бусы из игрового, соколинного, бычьего глаза
+RewriteCond %{QUERY_STRING} category_id=134
+RewriteRule ^index.php$ https://pkf-karo.ru/bizhuteriya/busy-kole/busy-iz-tigrovogo-sokolinnogo-bychego-glaza/? [R=301,L]
+
+# ID:00166 N-1 Бусы из сердолика
+RewriteCond %{QUERY_STRING} category_id=133
+RewriteRule ^index.php$ https://pkf-karo.ru/bizhuteriya/busy-kole/busy-iz-serdolika/? [R=301,L]
+
+# ID:00015 N-12 Шкатулки из змеевика - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=47
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-zmeevika/shkatulki/? [R=301,L]
+
+# ID:00044 N-7 Изделия с бронзой Часы настольные
+RewriteCond %{QUERY_STRING} category_id=45
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-s-bronzoy/chasy-nastolnye/? [R=301,L]
+
+# ID:00077 N-5 Срезы деревa
+RewriteCond %{QUERY_STRING} category_id=(19|75)&
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-na-dereve/srezy-dereva/? [R=301,L]
+
+# ID:00074 N-4 Рисунки на изделиях - Средние
+RewriteCond %{QUERY_STRING} category_id=71
+RewriteRule ^index.php$ https://pkf-karo.ru/risunki-na-izdeliyakh/srednie/? [R=301,L]
+
+# ID:00022 N-3 Часы "Погон" - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=103
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-zmeevika/chasy/chasy-pogon/? [R=301,L]
+
+# ID:00112 N-2 Бижутерия Селенит
+RewriteCond %{QUERY_STRING} category_id=56
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-selenita/bizhuteriya/? [R=301,L]
+
+# ID:00167 N-2 Мир камня - Обработка природного камня
+RewriteCond %{QUERY_STRING} id=79&Itemid=(35|25)
+RewriteRule ^index.php$ https://pkf-karo.ru/text/mir-kamnya/obrabotka-prirodnogo-kamnya/? [R=301,L]
+
+# ID:00051 N-1 Часы настенные - змеевик
+RewriteCond %{QUERY_STRING} category_id=53
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-iz-zmeevika/chasy/chasy-nastennye/? [R=301,L]
+
+# ID:00045 N-5 Рисунки на изделиях - Малые
+RewriteCond %{QUERY_STRING} category_id=72
+RewriteRule ^index.php$ https://pkf-karo.ru/risunki-na-izdeliyakh/malye/? [R=301,L]
+
+# ID:00075 N-5 Символ года - 2014-16
+RewriteCond %{QUERY_STRING} category_id=(147|185|196)
+RewriteRule ^index.php$ https://pkf-karo.ru/? [R=301,L]
+
+# ID:00016 N-4 Минералы - коллекционные образцы - Фигурки
+RewriteCond %{QUERY_STRING} category_id=90
+RewriteRule ^index.php$ https://pkf-karo.ru/mineraly-kollektsionnye-obraztsy-suveniry/figurki/ [R=301,L]
+
+# ID:00038 N-4 Панно из дерева - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=18&
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-na-dereve/anno-iz-dereva/? [R=301,L]
+
+# ID:00099 N-3 Разное - на дереве
+RewriteCond %{QUERY_STRING} category_id=7&
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-na-dereve/? [R=301,L]
+
+# ID:00039 N-2 Изделия с гравюрой на металле - Панно
+RewriteCond %{QUERY_STRING} category_id=179
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-s-gravyuroy-na-metalle/anno/? [R=301,L]
+
+# ID:00052 N-2 Часы из дерева - Сувениры из камня - ПКФ КАРО
+RewriteCond %{QUERY_STRING} category_id=151
+RewriteRule ^index.php$ https://pkf-karo.ru/izdeliya-na-dereve/chasy-iz-dereva/? [R=301,L]
+
+# ID:00014 N-4 Галерея
+RewriteCond %{QUERY_STRING} com_datsogallery
+RewriteRule ^index.php$ https://pkf-karo.ru/? [R=301,L]
+
+# ID:00012 N-99 Просмотр - Сувениры из камня - КАТАЛОГ
+RewriteCond %{QUERY_STRING} shop.browse&category_id=0&keyword=&manufacturer_id=0&Itemid=13
+RewriteRule ^index.php$ https://pkf-karo.ru/? [R=301,L]
+
+# ID:00027 N-219 Новости Дата - Сувениры из камня id=XXX
+RewriteCond %{QUERY_STRING} id=(\d\d\d)&Itemid=(14|25|99999999)
+RewriteRule ^index.php$ https://pkf-karo.ru/text/news? [R=301,L]
+
+# ID:00026 N-141 Новости Дата - Сувениры из камня id=XX
+RewriteCond %{QUERY_STRING} id=(\d\d)&Itemid=(14|25|99999999)
+RewriteRule ^index.php$ https://pkf-karo.ru/text/news? [R=301,L]
+
+
+#  =============== БЫЛО ТОЛЬКО ЭТО ====================
+RewriteCond %{HTTP_HOST} ^shop.pkf-karo.ru
+RewriteRule (.*) http://www.shop.pkf-karo.ru/$1 [R=301,L]

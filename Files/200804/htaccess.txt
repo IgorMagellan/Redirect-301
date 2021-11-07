@@ -1,0 +1,144 @@
+##
+# @version $Id: htaccess.txt 5973 2006-12-11 01:26:33Z robs $
+# @package Joomla RE
+# @localized Авторские права (C) 2005 Joom.Ru - Русский дом Joomla!
+# @copyright Авторские права (C) 2005 Open Source Matters. Все права защищены.
+# @license http://www.gnu.org/copyleft/gpl.html GNU/GPL
+# Joomla! - свободное программное обеспечение.
+# @translator Sourpuss (Sourpuss@mail.ru)
+##
+# -----------------======= ВНИМАНИЕ!!! =======----------------------------
+# ------- ОБЯЗАТЕЛЬНО УСТАНОВИТЕ CHMOD 644 НА ЭТОТ ФАЙЛ ------------------
+# ------------------------------------------------------------------------
+#  Установка кодировки сайта по умолчанию. При необходимости, закомментируйте.
+
+AddDefaultCharset WINDOWS-1251
+
+#  Следующие строки - попытка исправить настройки PHP
+#  для полного соответствия системным требованиям Joomla.
+#  Раскомментируйте (символ комментария - #) нужные строки,
+#  если настройки вашего хоста не соответствуют рекомендациям
+#  системных требований Joomla.
+#  При возникновении 500 ошибки сервера, закомментируйте строку, вызывающую
+#  ошибку, или все строки с php_value.
+
+#  php_value register_globals 0
+#  php_value display_errors 0
+#  php_value file_uploads 1
+#  php_value magic_quotes_gpc 1
+#  php_value magic_quotes_runtime 0
+
+
+#  Пример явного указания каталога для записи сессий:
+#  Для Windows - c:/temp
+#  для UNIX  - /tmp
+
+#  Указанные каталоги должны физически существовать и быть доступны для записи
+
+#  При необходимости, раскомментируйте строку ниже этой
+#  php_value session.save_path c:/temp
+
+
+#####################################################
+#  ПРОЧТИТЕ ПОЛНОСТЬЮ, ЕСЛИ БУДЕТЕ ИСПОЛЬЗОВАТЬ ЭТОТ ФАЙЛ
+#
+# Строка ниже этого раздела: 'Options +FollowSymLinks' может вызвать проблему
+# при некоторых конфигурациях сервера. Она необходима для использования модуля Apache mod_rewrite, но может быть
+# уже настроена администратором вашего сервера и изменение этого параметра в .htaccess может быть запрещено.
+# Если эта директива вызывает ошибку сервера, то закомментируйте строку (добавьте символ # в 
+# начало строки), перезагрузите в браузере сайт и протестируйте работу SEF-ссылок. Если они работают,
+# то вам не надо ничего менять здесь, т.к. всё уже настроено администратором сервера. 
+#
+# Используйте только один из двух разделов SEF, которые находятся ниже. Строки, которые можно
+# раскомментирвать (и использовать) имеют только один #.  Строки с двумя символами # раскомментировать не надо.
+# В разделах, которые вы не используете, все строки должны начинаться с символа #
+#
+# Для стандартного SEF, используйте раздел стандартного SEF. Вы можете
+# закомментировать все строки с RewriteCond и уменьшить загрузку сервера, если
+# у вас в корне нет каталогов с названиями 'component' или 'content'
+#
+# Если вы используете сторонние компоненты SEF или Core SEF, то раскомментируйте 
+# все строки в разделе 'SEF сторонних разработчиков или Core SEF'
+#
+#####################################################
+
+#####  РЕШЕНИЕ ПРОБЛЕМЫ С НЕРАБОТАЮЩИМИ URL КОМПОНЕНТОВ #####
+# СПЕЦИАЛЬНОЕ ПРИМЕЧАНИЕ ДЛЯ ПОЛЬЗОВАТЕЛЕЙ SMF, ИСПОЛЬЗУЮЩИХ МОСТ ИНТЕГРАЦИИ
+# ИЛИ ДЛЯ ТЕХ СЛУЧАЕВ, КОГДА НЕ РАБОТАЮТ URL КОМПОНЕНТОВ
+#
+# В обоих разделах 'Стандартного SEF', и 'SEF сторонних разработчиков или Core SEF' строка:
+# RewriteCond %{REQUEST_URI} ^(/component/option,com) [NC,OR] ##опционально - смотрите примечания##
+# может быть раскомментирована.  Если ваша Joomla/Mambo работает в подкаталоге,
+# то в эту строку можно вставить название подкаталога.
+# Например, если ваша Joomla/Mambo находится в подкаталоге '/test/',
+# то измените:
+# RewriteCond %{REQUEST_URI} ^(/component/option,com) [NC,OR] ##опционально - смотрите примечания##
+# на:
+# RewriteCond %{REQUEST_URI} ^(/test/component/option,com) [NC,OR] ##опционально - смотрите примечания##
+#
+#####################################################
+
+
+##  Может быть закомментировано, если вызывает ошибку сервера. Смотрите примечания выше.
+Options +FollowSymLinks
+
+#
+#  Включение mod_rewrite
+
+RewriteEngine On  
+
+
+#  Раскомментируйте следующую строку, если URL вашего web-сервера
+#  не связаны напрямую с физическими путями файлов.
+#  Обновите ВашКаталогJoomla (используйте "/" для обозначения корня сервера)
+
+# RewriteBase /	 
+
+
+########## Начало раздела стандартного SEF 
+########## Используйте эту секцию ТОЛЬКО для работы встроенного SEF Joomla
+## ВСЕ (RewriteCond) строки в этой секции необходимы только если 
+## на вашем сервере имеются каталоги с названиями 'content' или 'component' 
+## Если каталоги с такими названиями отсутствуют, то закомментируйте эти строки.
+#
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_URI} ^(/component/option,com) [NC,OR] 	##опционально - смотрите примечания##
+RewriteCond %{REQUEST_URI} (/|\.htm|\.php|\.html|/[^.]*)$  [NC]
+RewriteRule ^(content/|component/) index.php
+#
+########## Конец раздела стандартного SEF  
+
+						   
+
+########## Начало раздела SEF сторонних разработчиков или Core SEF	 
+########## Используйте этот раздел, если вы используете SEF-расширения типа OpenSEF, 404_SEF, 404SEFx, JoomSEF, SEF Advance и т.д.
+#
+#RewriteCond %{REQUEST_URI} ^(/component/option,com) [NC,OR] 	##опционально - смотрите примечания##
+#RewriteCond %{REQUEST_URI} (/|\.htm|\.php|\.html|/[^.]*)$  [NC]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule (.*) index.php
+#
+########## Конец раздела SEF сторонних разработчиков или Core SEF
+
+
+
+########## Начало - Правила обработки запросов для блокировки распространенных эксплоитов
+## If you experience problems on your site block out the operations listed below
+## This attempts to block the most common type of exploit `attempts` to Joomla! 
+#                              
+# Block out any script trying to set a mosConfig value through the URL
+RewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|\%3D) [OR]
+# Block out any script trying to base64_encode crap to send via URL
+RewriteCond %{QUERY_STRING} base64_encode.*\(.*\) [OR]
+# Block out any script that includes a <script> tag in URL
+RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+# Block out any script trying to set a PHP GLOBALS variable via URL
+RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+# Block out any script trying to modify a _REQUEST variable via URL
+RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+# Send all blocked request to homepage with 403 Forbidden error!
+RewriteRule ^(.*)$ index.php [F,L]
+# 
+########## Конец - Правила обработки (Rewrite rules) для блокировки распространенных эксплоитов

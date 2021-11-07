@@ -1,0 +1,18 @@
+http://www.shop.pkf-karo.ru/index.php?option=com_virtuemart&Itemid=13
+каталог товаров
+
+проверка редиректов
+https://bertal.ru/
+
+дока
+Apache mod_rewrite
+http://httpd.apache.org/docs/2.2/rewrite/
+
+1.добавить поля примечания в pins с флагом в гриде
+
+2.докончить генерацию .htaccess с учетом fGrp и сортировкой в заисимости от кол-ва pins
+
+3.доб индексы и сортировку в гриде rules (rcond, rrule, idgrp, fgrp)
+
+
+

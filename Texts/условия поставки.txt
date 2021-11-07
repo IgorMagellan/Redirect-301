@@ -1,0 +1,8 @@
+не редиректятся
+http://www.shop.pkf-karo.ru/index.php?id=12&Itemid=19&option=com_content&task=view
+
+
+редиректятся
+http://www.shop.pkf-karo.ru/index.php?option=com_content&task=view&id=12&Itemid=19
+http://www.shop.pkf-karo.ru/index.php?option=com_content&task=view&id=12&Itemid=25
+
