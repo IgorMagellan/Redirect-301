@@ -1,8 +1,0 @@
-http://www.shop.pkf-karo.ru/index.php?id=12&Itemid=19&option=com_content&task=view
-
-http://www.shop.pkf-karo.ru/index.php?option=com_content&task=view&id=12&Itemid=19
-
-Â ÒÀÁËÈÖÅ rules 
-
-idgrp=6 %{QUERY_STRING} ^option=com_content&task=view&id=12&Itemid=19   ÏĞÀÂÈËÜÍÛÉ
-ÅÙÅ ÂÊËŞ×ÈÒÜ 2 ÷òî âûùå
