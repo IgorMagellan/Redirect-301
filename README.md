@@ -11,4 +11,4 @@
 
 На этом ресурсе они есть - <https://github.com/VFPX/VFPRuntimeInstallers>
 
-выбрать VFP9SP2RT.exe 
+выбрать VFP9SP2RT.exe  
